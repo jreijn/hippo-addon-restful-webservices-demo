@@ -169,7 +169,62 @@
       <param-value>vm://</param-value>
     </init-param>
     <load-on-startup>5</load-on-startup> 
-  </servlet> 
+  </servlet>
+
+  <servlet>
+    <servlet-name>RepositoryWebservicesServlet</servlet-name>
+    <servlet-class>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-class>
+    <init-param>
+      <param-name>jaxrs.serviceClasses</param-name>
+      <param-value>
+        com.wordnik.swagger.jaxrs.listing.ApiListingResourceJSON,
+        org.onehippo.forge.webservices.jaxrs.system.SystemResource,
+        org.onehippo.forge.webservices.jaxrs.jcr.NodesResource,
+        org.onehippo.forge.webservices.jaxrs.jcr.PropertiesResource,
+        org.onehippo.forge.webservices.jaxrs.jcr.QueryResource,
+        org.onehippo.forge.webservices.jaxrs.HelloResource
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>jaxrs.providers</param-name>
+      <param-value>
+        org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider,
+        org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter,
+        org.onehippo.forge.webservices.jaxrs.exception.CustomWebApplicationExceptionMapper,
+        org.onehippo.forge.webservices.HippoAuthenticationRequestHandler,
+        com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider,
+        com.wordnik.swagger.jaxrs.listing.ResourceListingProvider
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>jaxrs.extensions</param-name>
+      <param-value>json=application/json, xml=application/xml</param-value>
+    </init-param>
+    <load-on-startup>6</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ReflectiveJaxrsConfig</servlet-name>
+    <servlet-class>org.onehippo.forge.webservices.swagger.ReflectiveJaxrsConfig</servlet-class>
+    <init-param>
+      <param-name>resourcePackage</param-name>
+      <param-value>org.onehippo.forge.webservices.jaxrs</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.api.basepath</param-name>
+      <param-value>http://localhost:8080/cms/rest/api</param-value>
+    </init-param>
+    <init-param>
+      <param-name>api.version</param-name>
+      <param-value>0.1.0</param-value>
+    </init-param>
+    <load-on-startup>7</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RepositoryWebservicesServlet</servlet-name>
+    <url-pattern>/rest/api/*</url-pattern>
+  </servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>StatusServlet</servlet-name>

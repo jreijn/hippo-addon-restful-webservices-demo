@@ -68,7 +68,7 @@
 
     <dependency>
       <groupId>org.onehippo.forge.webservices</groupId>
-      <artifactId>addon-webservices</artifactId>
+      <artifactId>hippo-addon-webservices</artifactId>
       <version>0.1.0-SNAPSHOT</version>
     </dependency>
    

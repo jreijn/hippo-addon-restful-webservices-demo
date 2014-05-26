@@ -28,3 +28,5 @@
 
   </c:otherwise>
 </c:choose>
+
+<hst:include ref="container"/>

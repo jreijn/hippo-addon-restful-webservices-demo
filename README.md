@@ -1,7 +1,7 @@
 # Hippo RESTful Web services demo project
 
-This project is a demo project for the [Hippo RestFul Web services addon](https://github.com/jreijn/hippo-webservices-addon).
-Run this project right now you will need to install the web services addon first into your local maven repository.
+This project is a demo project for the [Hippo RESTful Web services addon](https://github.com/jreijn/hippo-webservices-addon).
+Run this project right now you will need to install the web services add-on first into your local maven repository.
 
 ## Running locally
 
@@ -22,3 +22,19 @@ The web services addon APIs are documented with [Swagger](https://helloreverb.co
 
 Visiting [http://localhost:8080/cms/swagger/](http://localhost:8080/cms/swagger/) after startup shows you the Swagger UI, where you see and test the available service end-points and their documentation.
 Before you can do so you will need to login with the default username and password .e.g (admin/admin).
+
+## Examples of working with the API
+
+```
+$ curl --user admin:admin http://localhost:8080/cms/rest/api/
+```
+Which should return:
+
+``` json
+{
+  "clusterid":"",
+  "vendor":{
+    "name":"Hippo Repository","version":"2.26.00"
+    }
+}
+```

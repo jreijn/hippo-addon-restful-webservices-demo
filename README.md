@@ -1,7 +1,7 @@
 # Hippo RESTful Web services demo project
 
 This project is a demo project for the [Hippo RESTful Web services addon](https://github.com/jreijn/hippo-webservices-addon).
-Run this project right now you will need to install the web services add-on first into your local maven repository.
+To run this project  you will first need to install the web services add-on into your local maven repository.
 
 ## Running locally
 

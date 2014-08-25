@@ -14,7 +14,7 @@ From the project root folder, execute:
 ```
 
 Access the CMS at http://localhost:8080/cms, and the site at http://localhost:8080/site
-Logs are located in target/tomcat6x/logs
+Logs are located in target/tomcat7x/logs
 
 ## Testing the API
 

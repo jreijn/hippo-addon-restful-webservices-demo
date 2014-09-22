@@ -28,7 +28,7 @@ Before you can do so you will need to login with the default username and passwo
 ```
 $ curl --user admin:admin http://localhost:8080/cms/rest/api/
 ```
-Which should return:
+Which returns:
 
 ``` json
 {
@@ -37,4 +37,15 @@ Which should return:
     "name":"Hippo Repository","version":"2.26.00"
     }
 }
+```
+
+Performing a search for document within the cms
+
+```
+curl --user admin:admin -H "Content-Type: application/json" -XPOST http://localhost:8080/cms/rest/api/_query/ -d '
+{
+  "statement":"/jcr:root/content/documents//element(*,hippo:document)",
+  "language":"xpath",
+  "limit":5
+}'
 ```

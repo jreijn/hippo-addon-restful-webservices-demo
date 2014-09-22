@@ -1,7 +1,7 @@
 # Hippo RESTful Web services demo project
 
 This project is a demo project for the [Hippo RESTful Web services addon](https://github.com/jreijn/hippo-webservices-addon).
-Run this project right now you will need to install the web services add-on first into your local maven repository.
+To run this project  you will first need to install the web services add-on into your local maven repository.
 
 ## Running locally
 
@@ -14,7 +14,7 @@ From the project root folder, execute:
 ```
 
 Access the CMS at http://localhost:8080/cms, and the site at http://localhost:8080/site
-Logs are located in target/tomcat6x/logs
+Logs are located in target/tomcat7x/logs
 
 ## Testing the API
 

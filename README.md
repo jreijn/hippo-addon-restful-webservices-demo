@@ -1,5 +1,7 @@
 # Hippo RESTful Web services demo project
 
+[![Build Status](https://travis-ci.org/jreijn/hippo-addon-webservices-demo.svg?branch=master)](https://travis-ci.org/jreijn/hippo-addon-webservices-demo)
+
 This project is a demo project for the [Hippo RESTful Web services addon](https://github.com/jreijn/hippo-webservices-addon).
 To run this project  you will first need to install the web services add-on into your local maven repository.
 

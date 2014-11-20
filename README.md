@@ -44,7 +44,7 @@ Which returns:
 Performing a search for document within the cms
 
 ``` console
-curl --user admin:admin -H "Content-Type: application/json" -XPOST http://localhost:8080/cms/rest/api/_query/ -d '
+$ curl --user admin:admin -H "Content-Type: application/json" -XPOST http://localhost:8080/cms/rest/api/_query/ -d '
 {
   "statement":"/jcr:root/content/documents//element(*,hippo:document)",
   "language":"xpath",

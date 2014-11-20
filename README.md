@@ -27,7 +27,7 @@ Before you can do so you will need to login with the default username and passwo
 
 ## Examples of working with the API
 
-```
+``` console
 $ curl --user admin:admin http://localhost:8080/cms/rest/api/
 ```
 Which returns:
@@ -36,14 +36,14 @@ Which returns:
 {
   "clusterid":"",
   "vendor":{
-    "name":"Hippo Repository","version":"2.26.00"
+    "name":"Hippo Repository","version":"2.26.09"
     }
 }
 ```
 
 Performing a search for document within the cms
 
-```
+``` console
 curl --user admin:admin -H "Content-Type: application/json" -XPOST http://localhost:8080/cms/rest/api/_query/ -d '
 {
   "statement":"/jcr:root/content/documents//element(*,hippo:document)",

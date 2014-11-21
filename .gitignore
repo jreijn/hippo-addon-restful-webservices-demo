@@ -1,2 +1,4 @@
 # Created by .gitignore support plugin (hsz.mobi)
 atlassian-ide-plugin.xml
+scripts/news-2011.json.bak
+scripts/news-2011.json

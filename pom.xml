@@ -80,13 +80,13 @@
       <url>http://maven.onehippo.com/maven2/</url>
     </repository>
     <repository>
-      <id>sonatype-snapshot</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <id>sonatype-oss-public</id>
+      <url>https://oss.sonatype.org/content/groups/public/</url>
       <releases>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
       </releases>
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
     </repository>
   </repositories>
